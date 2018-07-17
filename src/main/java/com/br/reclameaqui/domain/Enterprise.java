@@ -10,12 +10,12 @@ import java.util.Objects;
 /**
  * A Enterprise.
  */
-@Document(collection = "enterprise")
+@Document(collection = "reclame_aqui")
 public class Enterprise implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id()
+    @Id
     private String id;
 
     @Field("title")

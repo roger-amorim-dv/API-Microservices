@@ -17,19 +17,19 @@ eureka:
     client:
         enabled: false
     instance:
-        appname: projeto_reclame
-        instanceId: projeto_reclame:${spring.application.instance-id:${random.value}}
+        appname: ReclameAqui
+        instanceId: ReclameAqui:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
-        name: projeto_reclame
+        name: ReclameAqui
     cache:
         type: simple
     data:
         mongodb:
             host: localhost
             port: 0
-            database: projeto_reclame
+            database: ReclameAqui
     mail:
         host: localhost
     messages:
@@ -67,13 +67,10 @@ jhipster:
             host: localhost
             port: 5000
             queue-size: 512
-    mail:
-        from: test@localhost
-        base-url: http://127.0.0.1:8080
     security:
         authentication:
             jwt:
-                secret: 734750240e169d2dc9271e440619c40f9722c65c
+                secret: db8beb92f59844de8a78f36bb976579eb0275a07
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

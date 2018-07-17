@@ -1,16 +1,16 @@
 version: '2'
 services:
-    projeto_reclame-mongodb:
+    reclameaqui-mongodb:
         image: mongo:3.6.3
         ports:
             - "27017:27017"
-        command: mongos --configdb projeto_reclame-mongodb-config
-    projeto_reclame-mongodb-node:
+        command: mongos --configdb reclameaqui-mongodb-config
+    reclameaqui-mongodb-node:
         build:
             context: .
             dockerfile: mongodb/MongoDB.Dockerfile
         command: mongod --replSet rs1 --noprealloc --smallfiles
-    projeto_reclame-mongodb-config:
+    reclameaqui-mongodb-config:
         image: mongo:3.6.3
-        container_name: projeto_reclame-mongodb-config
+        container_name: reclameaqui-mongodb-config
         command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

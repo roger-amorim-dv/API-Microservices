@@ -24,8 +24,8 @@ eureka:
         instance-info-replication-interval-seconds: 10
         registry-fetch-interval-seconds: 10
     instance:
-        appname: projeto_reclame
-        instanceId: projeto_reclame:${spring.application.instance-id:${random.value}}
+        appname: ReclameAqui
+        instanceId: ReclameAqui:${spring.application.instance-id:${random.value}}
         lease-renewal-interval-in-seconds: 5
         lease-expiration-duration-in-seconds: 10
         status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -40,6 +40,27 @@ eureka:
 ribbon:
     eureka:
         enabled: true
+feign:
+    hystrix:
+        enabled: true
+#    client:
+#        config:
+#            default:
+#                connectTimeout: 5000
+#                readTimeout: 5000
+
+# See https://github.com/Netflix/Hystrix/wiki/Configuration
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    strategy: SEMAPHORE
+# See https://github.com/spring-cloud/spring-cloud-netflix/issues/1330
+#                    thread:
+#                        timeoutInMilliseconds: 10000
+    shareSecurityContext: true
+
 management:
     endpoints:
         web:
@@ -60,7 +81,7 @@ management:
 
 spring:
     application:
-        name: projeto_reclame
+        name: ReclameAqui
     messages:
         basename: i18n/messages
     mvc:
@@ -100,11 +121,11 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: projeto_reclame@localhost
+        from: ReclameAqui@localhost
     swagger:
         default-include-pattern: /api/.*
-        title: projeto_reclame API
-        description: projeto_reclame API documentation
+        title: ReclameAqui API
+        description: ReclameAqui API documentation
         version: 0.0.1
         terms-of-service-url:
         contact-name:

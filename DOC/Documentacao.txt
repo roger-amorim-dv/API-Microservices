@@ -1,0 +1,17 @@
+Prezados,
+
+Venho apresentar a API de microservices como solicitada no challenge.
+
+Desenvolvi um CRUD simples de uma API que simula uma reclamação e retorna dados da empresa que fez a mesma, tais como:
+título
+descrição
+empresa
+localidade
+
+Para gerar esse projeto, utilizei o Jhipster como base, onde o mesmo faz a autenticação em uma outra API (UAA) que localiza-se em um container do docker.
+
+Ultilizei essa tecnologia para simular a autenticação de usuário, onde também criei uma simples aplicação em angular(Front-end) para realizar o serviço.
+
+A base também foi criada com banco de dados não relacional (MongoDB) onde já está configurada na pasta application.dev a conexão, onde está hospedada num host local
+localhost:27017
+

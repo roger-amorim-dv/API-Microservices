@@ -19,7 +19,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20180715212847",
+    "changelogDate": "20180717050858",
     "entityTableName": "enterprise",
     "dto": "mapstruct",
     "pagination": "no",
@@ -27,5 +27,6 @@
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
     "clientRootFolder": "",
-    "applications": "*"
+    "applications": "*",
+    "microserviceName": "ReclameAqui"
 }

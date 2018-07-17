@@ -1,17 +1,16 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.br.reclameaqui",
-      "nativeLanguage": "pt-br"
+      "packageName": "com.br.reclameaqui"
     },
     "jhipsterVersion": "5.1.0",
-    "applicationType": "monolith",
-    "baseName": "projeto_reclame",
+    "applicationType": "microservice",
+    "baseName": "ReclameAqui",
     "packageName": "com.br.reclameaqui",
     "packageFolder": "com/br/reclameaqui",
-    "serverPort": "8080",
+    "serverPort": "8081",
     "authenticationType": "jwt",
-    "cacheProvider": "ehcache",
+    "cacheProvider": "hazelcast",
     "enableHibernateCache": false,
     "websocket": false,
     "databaseType": "mongodb",
@@ -22,17 +21,13 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "734750240e169d2dc9271e440619c40f9722c65c",
-    "clientFramework": "angularX",
-    "useSass": true,
-    "clientPackageManager": "yarn",
+    "jwtSecretKey": "db8beb92f59844de8a78f36bb976579eb0275a07",
+    "enableTranslation": false,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
     "otherModules": [],
-    "enableTranslation": true,
-    "nativeLanguage": "pt-br",
-    "languages": [
-      "pt-br"
-    ]
+    "clientPackageManager": "yarn",
+    "skipClient": true,
+    "skipUserManagement": true
   }
 }

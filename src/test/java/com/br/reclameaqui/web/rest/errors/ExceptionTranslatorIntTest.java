@@ -1,6 +1,6 @@
 package com.br.reclameaqui.web.rest.errors;
 
-import com.br.reclameaqui.ProjetoReclameApp;
+import com.br.reclameaqui.ReclameAquiApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ProjetoReclameApp.class)
+@SpringBootTest(classes = ReclameAquiApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

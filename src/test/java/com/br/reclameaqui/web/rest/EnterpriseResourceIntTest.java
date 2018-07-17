@@ -1,6 +1,6 @@
 package com.br.reclameaqui.web.rest;
 
-import com.br.reclameaqui.ProjetoReclameApp;
+import com.br.reclameaqui.ReclameAquiApp;
 
 import com.br.reclameaqui.domain.Enterprise;
 import com.br.reclameaqui.repository.EnterpriseRepository;
@@ -37,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see EnterpriseResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ProjetoReclameApp.class)
+@SpringBootTest(classes = ReclameAquiApp.class)
 public class EnterpriseResourceIntTest {
 
     private static final String DEFAULT_TITLE = "AAAAAAAAAA";

@@ -1,6 +1,6 @@
 package com.br.reclameaqui.web.rest;
 
-import com.br.reclameaqui.ProjetoReclameApp;
+import com.br.reclameaqui.ReclameAquiApp;
 import com.br.reclameaqui.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = ProjetoReclameApp.class)
+@SpringBootTest(classes = ReclameAquiApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;
