@@ -1,0 +1,18 @@
+<div *ngIf="enterprise">
+	<div>
+		<label>Nome: </label> {{enterprise.enterprise}}
+	</div>
+	<div>
+		<label>Local: </label> {{enterprise.locale}}
+	</div>
+	<div>
+		<label>Titulo: </label> {{enterprise.title}}
+  </div>
+  <div>
+    <label>Descrição: </label>> {{enterprise.description}}
+  </div>
+ 
+	<span class="button is-small btn-danger" (click)='deleteEnterprise()'>Delete</span>
+ 
+	<hr/>
+</div>

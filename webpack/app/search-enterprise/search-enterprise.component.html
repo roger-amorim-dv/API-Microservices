@@ -1,0 +1,19 @@
+<div class="div">
+<h3>Buscar a Empresa</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input placeholder="Empresa" type="text" class="form-control" id="enterprise" required [(ngModel)]="enterprise" name="enterprise">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Buscar</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let customer of customers">
+    <h4>{{enterprise.id}} - {{enterprise.enterprise}} {{enterprise.description}}</h4>
+  </li>
+</ul>
+</div>

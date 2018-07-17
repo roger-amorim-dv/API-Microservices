@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-enterprise-heading" jhiTranslate="projetoReclameApp.enterprise.home.createOrEditLabel">Create or edit a Enterprise</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!enterprise.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="enterprise.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="projetoReclameApp.enterprise.title" for="field_title">Title</label>
+                    <input type="text" class="form-control" name="title" id="field_title"
+                        [(ngModel)]="enterprise.title" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="projetoReclameApp.enterprise.locale" for="field_locale">Locale</label>
+                    <input type="text" class="form-control" name="locale" id="field_locale"
+                        [(ngModel)]="enterprise.locale" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="projetoReclameApp.enterprise.company" for="field_company">Company</label>
+                    <input type="text" class="form-control" name="company" id="field_company"
+                        [(ngModel)]="enterprise.company" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="projetoReclameApp.enterprise.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="enterprise.description" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

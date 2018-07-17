@@ -1,0 +1,12 @@
+
+
+entity Enterprise {
+	title String,
+    locale String,
+    company String,
+    description String
+}
+
+dto * with mapstruct
+service all with serviceImpl
+
